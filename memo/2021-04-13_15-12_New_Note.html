@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2021-04-13_15-12_New_Note.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%A8os">ハードウェアとOS</h1>
+<p>パイプライン処理 - 分岐命令を少なくする必要がある</p>
+<p>パイプラインハザード - 制御ハザード　- 分岐先が決定するまで分岐先の命令を実行できないときに発生するパイプラインハザード</p>
+<p>VLIW - 互いに依存関係のない命令を一つの命令にまとめて同時に実行することで処理速度を高めるCPUの高速化処理法</p>
+<p>SIMD(Single Instruction Multiple Data) - 複数のデータに対して一個の命令で同一の操作を同時並列に行う方式</p>
+<p>MIPS - 1秒間に何100万回命令を実行できるかを表す単位</p>
+<p>スタックポインタ - サブルーチン呼び出し時に戻り先アドレスおよびレジスタの内容を格納するメモリのアドレス</p>
+<p>DRAM - コンデンサに電荷を蓄えた状態か否かによって1ビットを表現する、主記憶としてよく使われるメモリ
+SRAM - フリップフロップを用いる</p>
+<p>ライトスルー方式 - 書き込み命令実行時にキャッシュメモリと主記憶の両方を同時に書き換える方式<br>
+ライトバック方式 - キャッシュメモリから当該データが追い出されるまで主記憶への書き込みを行わない方式</p>
+<p>LFU (Least Frequently Used) - 参照頻度の最も低いブロックに置き換える
+LRU (Least Recently Used) - 最後に参照されてから最も時間の経ったブロックに置き換える</p>
+<p>RAID - 複数のディスクドライブを組み合わせ、補助記憶装置の耐障害性や性能を向上させる</p>
+<p>RAID - データおよび冗長ビットの記録方法と記録位置の組み合わせによって区別される</p>
+<p>RAID3 - ビット単位,専用のディスク</p>
+<p>RAID4 - ブロック単位,専用のディスク</p>
+<p>RAID5 - ブロック単位,3台以上のディスクに分散</p>
+<p>RAID0 - データの書き込み - 分散　実効データ容量 - 合計</p>
+<p>RAID1 - データの書き込み - 重複  実効データ容量 - 合計の半分</p>
+<p>NAS - ネットワークに直接接続できるストレージ機器のことでその実態はファイルサーバ。各種ＯＳからファイルを共有できるので、データを交換する業務に適している</p>
+<p>USB 3.0 - コンピュータと周辺機器を接続するシリアルインターフェース規格として広く普及しているＵＳＢのバージョンの一つ</p>
+<p>ガベージコレクション - プログラムが使用しなくなったヒープ領域を回収して再度使用可能にすること
+メモリコンパクション - 主記憶の空き領域を結合して一つの連続した領域にすること</p>
+<p>ページフォルト - プログラムがアクセスしようとした仮想メモリ領域が物理メモリ上になく、ストレージに退避していることがわかったときに発生する例外あるいは割込み処理</p>
+<p>スラッシング - ページング方式の仮想記憶において、ページ置き換えの発生頻度が高くなり、システムの処理能力が急激に低下すること</p>
+<p>ラウンドロビン方式 - プロセスごとに一定の処理時間を割り当てて、順番に実行していくスケジューリング方式</p>
+<p>タイムシェアリングシステム - 一台のコンピュータを複数人が同時に使用する</p>
+<p>プリエンプティブ方式 - 一つのコンピュータ上で複数のプロセスを同時並行的に動作させるマルチタスクを実現する方法のうち、システム資源の管理をOSが行う方法
+ノンプリエンプティブ方式 - 各プロセスがシステム資源を自主管理する方式</p>
+<h1 id="%E6%83%85%E5%A0%B1%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3">情報セキュリティ</h1>
+<p>ディレクトリトラバーサル攻撃 - Webアプリケーションの脆弱性などを利用してWebアプリの関連ファイルが格納されているディレクト
+リの上位のディレクトリといった本来アクセスできない
+はずのファイル領域にアクセスしようとする攻撃</p>
+<p>クロスサイトスクリプティング - 脆弱性のあるWebアプリケーションに悪意のあるJavaScriptコードを含んだデータを入力する攻撃</p>
+<p>DNSキャッシュポイズニング - PCが参照するDNSサーバに偽のドメイン情報を注入して、偽装されたサーバにPCの利用者を誘導する</p>
+<p>SEOポイズニング - Web検索サイトの順位つけアルゴリズムを悪用して、検索結果の上位に、悪意のあるWebサイトを表示させる</p>
+<p>ポリモーフィックマルウェア - 感染ごとにマルウェアのコードを異なる鍵で暗号化することで同一のパターンでは検知されないようにする</p>
+<p>rootkit - バックtドアを作ったり侵入の痕跡を隠ぺいするといった機能がパッケージ化された不正なプログラムやツール</p>
+<p>パケットフィルタリング型ファイアーウォール - IPパケットの送信元IPアドレスと宛先IPアドレスに基づいて、パケットの通過を許可するか判断する</p>
+<p>WAF(Web Application Firewall) - Webアプリケーションの通信内容に基づいて通信の可否を判断する</p>
+<p>WPA2-PSK - 暗号アルゴリズムとしてAESを採用した無線LANの暗号化方式で、アクセスポイントに設定されているのと同じSSIDとパスワードが設定されている端末だけに接続が許可される</p>
+<p>SSID - 利便性を高めるために周囲に発信されることもあるアクセスポイントを識別するためのID</p>
+<p>OP25B - ISP管理下の動的IPアドレスから外部のグローバルIPアドレスへのTCP25番ポートでの通信を遮断することでISP管理下の動的アドレスを割り当てられたPCなどからのスパムメール送信を防止する</p>
+<p>サブミッションポート - メール送信時に従来のTCPポート番号25ではなくTCP番号587へ接続しSMTP-AUTHと呼ばれるプロトコルに従って利用者承認を受け取ることを要求するメールの不正受信対策において、メールサーバ側に用意されるTCPポート番号587のことである</p>
+<p>SPF - メールサーバがメールを受信したときに送信元ドメインのDNSサーバにSPFレコードと呼ばれる情報を問い合わせ、受信したメールの送信元IPアドレスがそこに載っていなければ送信元ドメインが詐称されていると判断する迷惑メールの送信対策<br>
+　
+スニッフィング - ネットワーク上で流れているデータを盗聴することで、パスワードなどを入手しようとする攻撃</p>
+<p>シングルサインオン - 一度の認証で複数のWebシステムを利用できるようにする</p>
+<p>エージェント型     - 認証サーバとアプリケーションサーバが同一ドメイン クッキーはクライアント上で保存</p>
+<p>リバースプロキシ型 - 認証サーバとアプリケーションサーバが同一ドメインでなくてもよい</p>
+<p>チャレンジレスポンス認証 - 利用者が入力したパスワードと、サーバから送られたランダムなデータとをクライアント側で演算子、その結果を送信</p>
+<p>ファジング - 問題を引き起こしそうな多様なデータを入力し、挙動を監視して、脆弱性を見つけ出す</p>
+<p>デジタルフォレンジックス - 不正アクセスなどコンピューターに関する犯罪に対してデータの法的な証拠性を確保できるように原因究明に必要なデータの収集分析をすること</p>
+<p>ステガノグラフィ - 画像データや音声データなどに別のデータを気づかれないように埋め込む技術</p>
+<p>ディジタル署名 - 発信者が自分の秘密鍵をつかってメッセージのハッシュ値から生成</p>
+<p>CRL - 有効期限内に失効したディジタル証明書のシリアル番号と、失効した日時の対応が掲載されたリスト</p>
+<p>SSL/TLSによる暗号化通信 - クライアントから接続要求を受けたWebサーバが、自身のサーバ証明書をクライアントへ送付サーバ証明書を受け取ったクライアントは、認証局(CA)の公開鍵によってサーバ証明書の正当性を確認</p>
+<p>BCP - 事業の中断・阻害に対応し、事業を復旧し、再開し、あらかじめ定められたレベルに回復するための手順を規定したもの</p>
+
+</body>
+</html>
