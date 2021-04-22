@@ -354,17 +354,21 @@ code {
 
 </style>
 
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ]
+    });
+  });
+</script>
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
 <h1 id="90problems">90problems</h1>
 <p>単純パスの長さの最大 = 木の直径</p>
 <p><strong>木の直径を求めるときは最短距離計算を2回やる</strong></p>
@@ -381,12 +385,25 @@ code {
 </summary>
 </details>
 <h1 id="java">Java</h1>
+<h2 id="%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA">ウェブアプリ</h2>
+<details>インスタンスの生成、インスタンスのライフサイクル管理を行う
+<summary>DI(Dependency Injection) @がつくやつ
+</summary>
+</details>
+<h4 id="%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97">スコープ</h4>
+<p>デフォルトではsingletonになり、インスタンスが一つしか作られないため注意が必要</p>
+<p>各スコープの有効期限は以下の通り</p>
+<details>ユーザがログインしてからログアウトするまでが有効期限。ユーザ情報やそれに紐づく権限などの情報をSessionスコープとして持っておく
+<summary>Sessionスコープ
+</summary>
+</details>
+<details>HTTPの1リクエストが有効期限。ユーザ登録画面から登録結果画面までがRequestスコープの範囲
+<summary>Requestスコープ
+</summary>
+</details>
 <h1 id="c">C++</h1>
 <details>クラス、構造体、POD(int等のいわゆるプレーンな古い型)を複数入れることが出来る"入れ物"のことである
 <summary>コンテナクラス </summary>
-</details>
-<details>参照先を書き換えることができない
-<summary>const& </summray>
 </details>
 <details>
 <div>
@@ -406,5 +423,23 @@ private:
 </div>
 <summary>staticメンバ変数</summary>
 </details>
+<h2 id="const">const</h2>
+<p><strong>constがアスタリスクの左にあるときはポインタが指し示すデータが不変</strong></p>
+<p><strong>constがアスタリスクの右にあるときはポインタそのものが不変</strong></p>
+<pre class="hljs"><code><div>char greeting[] = &quot;Hello&quot;;
+const char *p = greeting;       //ポインタは非constでデータはconst
+char *const p = greeting;       //ポインタはconstでデータは非const
+const char *const p = greeting; //ポインタもデータもconst
+</div></code></pre>
+<details>
+constなメンバ関数で、メンバ変数を変更しようとするとエラーになる
+<p>そこで、<strong>mutable修飾子</strong>をメンバ変数につけるとconstなメンバ関数内でも変更可能になる</p>
+<summary>constなメンバ関数(関数名の後ろにconstを指定)
+<summary>
+</details>
+<details>参照先を書き換えることができない
+<summary>const& </summray>
+</details>
+
 </body>
 </html>
