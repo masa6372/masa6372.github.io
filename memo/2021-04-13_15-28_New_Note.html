@@ -394,6 +394,7 @@ code {
 <th style="text-align:center">変換時間</th>
 <th style="text-align:center">回路規模</th>
 <th style="text-align:center">消費電力</th>
+<th style="text-align:center">分解能</th>
 </tr>
 </thead>
 <tbody>
@@ -401,6 +402,7 @@ code {
 <td style="text-align:center">非常に短い</td>
 <td style="text-align:center">大きい</td>
 <td style="text-align:center">大きい</td>
+<td style="text-align:center">小さい</td>
 </tr>
 </tbody>
 </table>
@@ -419,11 +421,13 @@ code {
 <th style="text-align:center">変換時間</th>
 <th style="text-align:center">回路規模</th>
 <th style="text-align:center">消費電力</th>
+<th style="text-align:center">分解能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"></td>
+<td style="text-align:center">中程度</td>
+<td style="text-align:center">小さい</td>
 <td style="text-align:center">小さい</td>
 <td style="text-align:center">小さい</td>
 </tr>
@@ -433,6 +437,48 @@ code {
 </div>
 <summary>
 逐次比較型（SAR）型ADC
+</summary>
+</details>
+<details>  
+<div>
+一般的な1.5bit/ステージ構成の場合、MSBを決めるステージ1から順番にパイプライン動作で以下の処理を繰り返す
+<dl>
+<dd>アナログ入力を標本化(S/H)する</dd>
+<dd>同時にアナログ入力をADCで3値(1.5bit)のデジタル値に変換</dd>
+<p>アナログ入力$&lt;=-V_{REF}/4$ -&gt; D = &quot;00&quot;</p>
+<p>$-V_{REF}/4　&lt;$アナログ入力 $&lt;=V_{REF}/4$ -&gt; D = &quot;01&quot;</p>
+<p>$V_{REF}/4 &lt;$ アナログ入力 -&gt; D = &quot;10&quot;</p>
+<dd>3値(1.5bit)のデジタル値をDACでアナログ値に変換</dd>
+</dl>
+<p>D = &quot;00&quot; -&gt; DAC出力:$-V_{REF}/2$</p>
+<p>D = &quot;01&quot; -&gt; DAC出力:$0$</p>
+<p>D = &quot;10&quot; -&gt; DAC出力:$V_{REF}/2$</p>
+<dl>
+<dd>標本化した電圧からDAC出力電圧を引いたものを二倍に増幅し次のステージへ出力</dd>
+<dd>LSBを決めるステージNの処理が完了すると、各ステージ間の遅延を補正しそれぞれのデジタル出力を加算することで、デジタル信号への変換が完了する</dd>
+</dl>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">変換時間</th>
+<th style="text-align:center">回路規模</th>
+<th style="text-align:center">消費電力</th>
+<th style="text-align:center">分解能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">長い</td>
+<td style="text-align:center">大きい</td>
+<td style="text-align:center">大きい</td>
+<td style="text-align:center">大きい</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/pipelineADC.jpg" alt="pipelineADC"></p>
+</div>
+<summary>
+パイプライン型ADC
 </summary>
 </details>
 <h2 id="%E3%82%B3%E3%83%92%E3%83%BC%E3%83%AC%E3%83%B3%E3%83%88%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B0">コヒーレントサンプリング</h2>
