@@ -423,6 +423,7 @@ private:
 </div>
 <summary>staticメンバ変数</summary>
 </details>
+<hr>
 <h2 id="const">const</h2>
 <p><strong>constがアスタリスクの左にあるときはポインタが指し示すデータが不変</strong></p>
 <p><strong>constがアスタリスクの右にあるときはポインタそのものが不変</strong></p>
@@ -440,6 +441,18 @@ constなメンバ関数で、メンバ変数を変更しようとするとエラ
 <details>参照先を書き換えることができない
 <summary>const& </summray>
 </details>
+<hr>
+<p>参照</p>
+<ul>
+<li>参照は必ず初期化しなければならない</li>
+<li>参照は参照する変数を途中から変更することができない</li>
+</ul>
+<hr>
+<p>コンパイラが自動生成することを望まない関数の使用を禁止する方法</p>
+<ul>
+<li>対応するメンバ関数をprivateに宣言し、定義を書かない</li>
+<li>Uncopyableのようなクラスを使う</li>
+</ul>
 
 </body>
 </html>
