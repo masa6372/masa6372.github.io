@@ -17,9 +17,9 @@ tags:
 
 - **電界強度**
 <br>
-微小ダイポールの電界強度   &thinsp;&nbsp;&nbsp;&nbsp;&nbsp; $ E = \frac{\sqrt{45p}}{d}$  [V/m]  
+微小ダイポールの電界強度   &thinsp;&nbsp;&nbsp;&nbsp;&nbsp; $ E = \frac{\sqrt{45p}}{d}$  [V/m]
 <br>
-半波長ダイポールの電界強度&nbsp;&nbsp;&nbsp;$ E = \frac{7\sqrt{p}}{d}$  [V/m]  
+半波長ダイポールの電界強度&nbsp;&nbsp;&nbsp;$ E = \frac{7\sqrt{p}}{d}$  [V/m]
 <br>
 アンテナの電解強度  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$E = \frac{30G \sqrt{p}}{d}$  [V/m] (Gはアンテナの絶対利得)
 <br>
@@ -78,3 +78,10 @@ $ G_I = \eta \frac{4\pi A}{\lambda ^2} = \eta \frac{4\pi }{\lambda ^2} \times \p
 <br>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [無線工学B](#無線工学b)
+  - [アンテナ理論](#アンテナ理論)
+
+<!-- /code_chunk_output -->
