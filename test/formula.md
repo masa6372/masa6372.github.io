@@ -60,6 +60,6 @@ $ S_S = \frac{G\lambda^2}{4\pi}$
 &nbsp;
 
 - **アンテナの絶対利得**
-$開口面積A, 開口径D, 開口効率\etaのアンテナの絶対利得G_I$
+開口面積$A$, 開口径$D$, 開口効率$\eta$のアンテナの絶対利得$G_I$
 $ G_I = \eta \frac{4\pi A}{\lambda ^2} = \eta \frac{4\pi }{\lambda ^2} \times \pi (\frac{D}{2})^2 =(\frac{\pi D}{\lambda})^2 $
 &nbsp;
