@@ -35,7 +35,7 @@ $l_e= \frac{\lambda}{\pi}$
 <br>
 
 - **アンテナの特性インピーダンス**
-*長さ$l_0$,直径$d$の素子の特性インピーダンス$Z_0$は*
+長さ$l_0$,直径$d$の素子の特性インピーダンス$Z_0$は
 <br>
 $ Z_0 = 138log_{10}\frac{2l_0}{d} \quad (l_0 = \frac{\lambda}{4}) $
 <br>
@@ -43,14 +43,14 @@ $ Z_0 = 138log_{10}\frac{2l_0}{d} \quad (l_0 = \frac{\lambda}{4}) $
 <br>
 $ \varDelta = \frac{42.55}{\pi Z_0}$
 <br>
-*短縮率を考慮したアンテナの長さ*
+短縮率を考慮したアンテナの長さ
 <br>
 $ l = \frac{\lambda}{4}(1 - \varDelta) $
 <br>
 
 - **開放線路のインピーダンス**
 <br>
-*特性インピーダンス$Z_0$,長さ$l$の開放線路のインピーダンス$Z_F$*
+特性インピーダンス$Z_0$,長さ$l$の開放線路のインピーダンス$Z_F$
 <br>
 $ Z_F = -jZ_0 cot\beta l \quad(cot\theta = 1/tan\theta)$
 <br>
@@ -72,7 +72,9 @@ $ S_S = \frac{G\lambda^2}{4\pi}$
 
 - **アンテナの絶対利得**
 <br>
-*開口面積$A$, 開口径$D$, 開口効率$\eta$のアンテナの絶対利得$G_I$*
+開口面積$A$, 開口径$D$, 開口効率$\eta$のアンテナの絶対利得$G_I$
 <br>
 $ G_I = \eta \frac{4\pi A}{\lambda ^2} = \eta \frac{4\pi }{\lambda ^2} \times \pi (\frac{D}{2})^2 =(\frac{\pi D}{\lambda})^2 $
 <br>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
