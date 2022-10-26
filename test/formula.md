@@ -77,11 +77,24 @@ $ S_S = \frac{G\lambda^2}{4\pi}$
 $ G_I = \eta \frac{4\pi A}{\lambda ^2} = \eta \frac{4\pi }{\lambda ^2} \times \pi (\frac{D}{2})^2 =(\frac{\pi D}{\lambda})^2 $
 <br>
 
+## 給電線
+- **電圧反射係数**
+電圧反射係数$\Gamma$の導出　給電線の特性インピーダンス$Z_0$負荷インピーダンスを$Z_R$とすると
+<br>
+$\Gamma = \frac{Z_R - Z_0}{Z_R + Z_0} $
+<br>
+- **電圧定在波比**
+電圧定在波比$S$
+<br>
+$ S = \frac{1+|\Gamma|}{1-|\Gamma|} $
+
+
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 
 <!-- code_chunk_output -->
 
 - [無線工学B](#無線工学b)
   - [アンテナ理論](#アンテナ理論)
+  - [給電線](#給電線)
 
 <!-- /code_chunk_output -->
