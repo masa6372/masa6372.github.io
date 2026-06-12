@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
+    <link href="../../styles/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Analog Circuits - My test page</title>
+</head>
+<body>
+    <h1>アナログ回路 学習・設計メモ</h1>
+    <p>CMOS集積回路や発振回路などの設計、Virtuosoでの検証記録をまとめています。</p>
+
+    <h2>回路ブロック別</h2>
+    <ul>
+        <li><a href="ADC/ADC.html">ADC (A/Dコンバータ)</a></li>
+        <li><a href="OSC/OSC.html">OSC (発振回路・PLL)</a></li>
+    </ul>
+
+
+    <h2>文献メモ</h2>
+    <ul>
+        <li><a href="razavi/pll_study.html">Razavi本 読書録 (PLL・発振回路)</a></li>
+    </ul>
+
+    <hr>
+    <p><a href="../../index.html">トップページへ戻る</a></p>
+</body>
+</html>
