@@ -7544,38 +7544,24 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e528ea77-ec5b-481c-8706-03c2a129ee96">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3244eef8-ef97-41c6-878f-b9f5137e1a7f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="1次ADC" src="./image/DeltaSigma.png" title="DeltaSigma"/></p>
+<p><img alt="1次ADC" src="/image/DeltaSigma.png" title="DeltaSigma"/></p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f8120b37-8897-4589-9d2e-005f71231712">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e7a3777a-4c22-4f2e-b727-af21a96639d0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>理想素子でADCを設計（下図を設計したつもり)<br/>
-<img alt="1次理想ADC" src="./image/ideal_DeltaSigma.png" title="ideal_DeltaSigma"/></p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b4068b8c-8577-4894-8790-88235fbbacca">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"/>FFTしてノイズシェーピング特性の確認</li>
-</ul>
+<p>理想素子でADCを設計</p>
 </div>
 </div>
 </div>
