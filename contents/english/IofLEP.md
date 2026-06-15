@@ -2,8 +2,20 @@
 ## Interpretation of Lengthy English Passages
 
 ### 前期20題
-- [x] 1  
-+ cling to  
 
-**英文:** Let us cling to what suits us ~
-**日本語訳:** 自分に適したものに固執しよう
+<details>
+<summary>✅ 第1問</summary>
+
+- **cling to** : ～に固執する
+
+> **英文:** Let us cling to what suits us ~
+> **和訳:** 自分に適したものに固執しよう
+
+</details>
+
+<details>
+<summary>⬜️ 第2問</summary>
+
+（ここに第2問のメモを書く）
+
+</details>
