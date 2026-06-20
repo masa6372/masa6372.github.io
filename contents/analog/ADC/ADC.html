@@ -223,54 +223,5 @@ ASD
 
 <hr>
 
-<h2>ΔΣADC評価での使い分け</h2>
-
-<table>
-    <thead>
-        <tr><th>用途</th><th>推奨スペクトル</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>動作確認</td><td>振幅スペクトル</td></tr>
-        <tr><td>ノイズシェーピング確認</td><td>振幅スペクトル</td></tr>
-        <tr><td>SNR計算</td><td>PSD</td></tr>
-        <tr><td>SNDR計算</td><td>PSD</td></tr>
-        <tr><td>ENOB算出</td><td>PSD</td></tr>
-        <tr><td>オペアンプ雑音評価</td><td>ASD</td></tr>
-        <tr><td>ADC雑音評価</td><td>PSD</td></tr>
-    </tbody>
-</table>
-
-<p>今回Cadence Virtuosoで表示した</p>
-<pre><code>db20(dft(VT("/VDAC"), ...))</code></pre>
-<p>は、</p>
-<p>$$20\log_{10}|X[k]|$$</p>
-<p>であり、<strong>DFT振幅スペクトル（振幅スペクトルのdB表示）</strong>に相当する。</p>
-
-<h3>結果</h3>
-<ul>
-    <li>低周波側のノイズフロアが低い</li>
-    <li>高周波側に向かってノイズフロアが上昇する</li>
-    <li>量子化ノイズが高周波へ押し上げられている</li>
-</ul>
-
-<p>1次ΔΣADCで期待されるノイズシェーピング特性を確認できた。</p>
-<p>量子化ノイズ伝達関数は</p>
-<p>$$NTF(z)=1-z^{-1}$$</p>
-<p>であり、低周波帯域では量子化ノイズが抑圧される。</p>
-
-<hr>
-
-<h1>今後の予定</h1>
-<p>理想モデルによる基本動作確認は完了した。<br>
-今後は各ブロックを順次非理想モデルへ置き換え、性能への影響を評価する。</p>
-<ol>
-    <li>スイッチのMOS化</li>
-    <li>積分器オペアンプの実回路化</li>
-    <li>コンパレータの実回路化</li>
-    <li>DACおよび基準電圧回路の非理想性評価</li>
-    <li>SNR・SNDR評価</li>
-    <li>デシメーションフィルタ追加</li>
-</ol>
-
 </body>
 </html>
