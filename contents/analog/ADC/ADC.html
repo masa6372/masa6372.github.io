@@ -56,6 +56,13 @@
         font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
         font-size: 85%;
     }
+    ul, ol {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+    strong {
+        font-weight: 600;
+    }
 </style>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -221,7 +228,21 @@ PSD
 ASD
 |X(f)| / √Δf</code></pre>
 
-<hr>
+<h2>「FFT点数とノイズフロア」および「kT/Cノイズのサンプリング周波数依存性」の関係</h2>
+
+<h3>1. FFT点数とノイズフロア（信号処理上の変化）</h3>
+<ul>
+    <li><strong>アクション:</strong> FFTの点数 ($N$) を増やす</li>
+    <li><strong>メカニズム:</strong> 周波数分解能が細かくなり、ノイズがより多くのビンに分割される</li>
+    <li><strong>結果:</strong> 1ビン当たりのエネルギーが低下し、<strong>見かけ上のノイズフロアが減少したように見える</strong></li>
+</ul>
+
+<h3>2. kT/Cノイズとサンプリング周波数（物理的な分散）</h3>
+<ul>
+    <li><strong>アクション:</strong> サンプリング周波数 ($f_s$) を高くする</li>
+    <li><strong>メカニズム:</strong> 積分器などの熱雑音 (kT/C) が、より広いナイキスト帯域へ引き伸ばされて分散する</li>
+    <li><strong>結果:</strong> 1Hz当たりのノイズ密度が薄まり、特定帯域内の<strong>見かけ上のノイズが減少したように見える</strong></li>
+</ul>
 
 </body>
 </html>
