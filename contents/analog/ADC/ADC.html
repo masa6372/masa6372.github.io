@@ -7510,7 +7510,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6a9eb7ec-84ea-4284-aea7-6777a017edcb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3b8d11f9-90a2-4d27-970f-c20f9d49538c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7518,7 +7518,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="ADC%E8%A8%AD%E8%A8%88%E3%83%A1%E3%83%A2">ADC設計メモ<a class="anchor-link" href="#ADC%E8%A8%AD%E8%A8%88%E3%83%A1%E3%83%A2">¶</a></h1><p>3章まで読んだが、イチから全部丸々読んでいたら日が暮れてしまうのでΔΣから学習。 分からないところがあれば都度戻るようにする。</p>
 <hr/>
-<h1 id="1%E6%AC%A1%CE%94%CE%A3ADC">1次ΔΣADC<a class="anchor-link" href="#1%E6%AC%A1%CE%94%CE%A3ADC">¶</a></h1><h2 id="1bit-%CE%94%CE%A3ADC%E5%9B%9E%E8%B7%AF">1bit ΔΣADC回路<a class="anchor-link" href="#1bit-%CE%94%CE%A3ADC%E5%9B%9E%E8%B7%AF">¶</a></h2><p>教科書に掲載されている1次1bit ΔΣADC回路。</p>
+<h2 id="1%E6%AC%A1%CE%94%CE%A3ADC">1次ΔΣADC<a class="anchor-link" href="#1%E6%AC%A1%CE%94%CE%A3ADC">¶</a></h2><h3 id="1bit-%CE%94%CE%A3ADC%E5%9B%9E%E8%B7%AF">1bit ΔΣADC回路<a class="anchor-link" href="#1bit-%CE%94%CE%A3ADC%E5%9B%9E%E8%B7%AF">¶</a></h3><p>教科書に掲載されている1次1bit ΔΣADC回路。</p>
 <p><img alt="1次理想ADC" src="./image/ideal_DeltaSigma.png" title="ideal_DeltaSigma"/></p>
 <hr/>
 <h2 id="%E7%90%86%E6%83%B3%E7%B4%A0%E5%AD%90%E3%81%AB%E3%82%88%E3%82%8B%E5%AE%9F%E8%A3%85">理想素子による実装<a class="anchor-link" href="#%E7%90%86%E6%83%B3%E7%B4%A0%E5%AD%90%E3%81%AB%E3%82%88%E3%82%8B%E5%AE%9F%E8%A3%85">¶</a></h2><p>Cadence Virtuoso上で理想素子を用いて1次ΔΣADCを構成した。</p>
@@ -7586,26 +7586,61 @@ a.anchor-link {
 </tbody>
 </table>
 <h3 id="%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%94%E3%83%B3%E3%82%B0%E7%89%B9%E6%80%A7">ノイズシェーピング特性<a class="anchor-link" href="#%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%B7%E3%82%A7%E3%83%BC%E3%83%94%E3%83%B3%E3%82%B0%E7%89%B9%E6%80%A7">¶</a></h3><p><img alt="ノイズシェーピング特性" src="./image/noiseshaping_noInput.png" title="noiseshaping_noInput"/></p>
-<h3 id="%E7%B5%90%E6%9E%9C">結果<a class="anchor-link" href="#%E7%B5%90%E6%9E%9C">¶</a></h3><ul>
-<li>低周波側のノイズフロアが低い</li>
-<li>高周波側に向かってノイズフロアが上昇する</li>
-<li>量子化ノイズが高周波へ押し上げられている</li>
+<h2 id="%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E8%A1%A8%E7%8F%BE%E3%81%AE%E9%81%95%E3%81%84">スペクトル表現の違い<a class="anchor-link" href="#%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88%E3%83%AB%E8%A1%A8%E7%8F%BE%E3%81%AE%E9%81%95%E3%81%84">¶</a></h2><p>FFT/DFTの結果は目的に応じて様々な形で表現される。</p>
+<p>| 名称 | 数式 | 単位 | 意味 | FFT点数依存 |
+|--------|--------|--------|--------|--------|
+| DFT振幅スペクトル | $|X[k]|$ | DFT係数 | DFTで得られた複素係数の絶対値 | あり |
+| 振幅スペクトル (Amplitude Spectrum) | $|X(f)|$ | V | 各周波数成分の振幅 | あり |
+| パワースペクトル (Power Spectrum) | $|X(f)|^2$ | V² | 各周波数成分が持つパワー | あり |
+| 振幅スペクトル密度 (ASD) | $\frac{|X(f)|}{\sqrt{\Delta f}}$ | V/√Hz | 1√Hzあたりの振幅 | なし |
+| パワースペクトル密度 (PSD) | $\frac{|X(f)|^2}{\Delta f}$ | V²/Hz | 1Hzあたりのパワー | なし |</p>
+<p>ここで、</p>
+<p>$$\Delta f = \frac{f_s}{N}$$</p>
+<ul>
+<li>$f_s$：サンプリング周波数</li>
+<li>$N$：FFTポイント数</li>
 </ul>
-<p>1次ΔΣADCで期待されるノイズシェーピング特性を確認できた。</p>
-<p>量子化ノイズ伝達関数は</p>
-<p>$$NTF(z)=1-z^{-1}$$</p>
-<p>であり、低周波帯域では量子化ノイズが抑圧される。</p>
+<p>である。</p>
 <hr/>
-<h1 id="%E4%BB%8A%E5%BE%8C%E3%81%AE%E4%BA%88%E5%AE%9A">今後の予定<a class="anchor-link" href="#%E4%BB%8A%E5%BE%8C%E3%81%AE%E4%BA%88%E5%AE%9A">¶</a></h1><p>理想モデルによる基本動作確認は完了した。</p>
-<p>今後は各ブロックを順次非理想モデルへ置き換え、性能への影響を評価する。</p>
-<ol>
-<li>スイッチのMOS化</li>
-<li>積分器オペアンプの実回路化</li>
-<li>コンパレータの実回路化</li>
-<li>DACおよび基準電圧回路の非理想性評価</li>
-<li>SNR・SNDR評価</li>
-<li>デシメーションフィルタ追加</li>
-</ol>
+<h2 id="dB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88">dB表示した場合<a class="anchor-link" href="#dB%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88">¶</a></h2><p>| 名称 | dB表記 |
+|--------|--------|
+| 振幅スペクトル | $20\log_{10}|X|$ |
+| パワースペクトル | $10\log_{10}|X|^2$ |
+| ASD | $20\log_{10}\left(\frac{|X|}{\sqrt{\Delta f}}\right)$ |
+| PSD | $10\log_{10}\left(\frac{|X|^2}{\Delta f}\right)$ |</p>
+<p>振幅スペクトルとパワースペクトルは</p>
+<p>$$20\log_{10}|X| = 10\log_{10}|X|^2$$</p>
+<p>となるため、dB表示では同じ値になる。</p>
+<hr/>
+<h2 id="%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">イメージ<a class="anchor-link" href="#%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">¶</a></h2><div class="highlight"><pre><span></span>時間波形 x[n]
+      │
+      ▼
+DFT/FFT
+      │
+      ▼
+DFT振幅スペクトル
+|X[k]|
+      │
+      ├─ 振幅として見る
+      ▼
+振幅スペクトル
+|X(f)|
+      │
+      ├─ 二乗
+      ▼
+パワースペクトル
+|X(f)|²
+      │
+      ├─ 周波数分解能 Δf で割る
+      ▼
+PSD
+|X(f)|² / Δf
+      │
+      └─ 平方根
+      ▼
+ASD
+|X(f)| / √Δf
+</pre></div>
 </div>
 </div>
 </div>
