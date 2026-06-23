@@ -7510,7 +7510,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7e246db1-8f2a-431f-b220-6bf48d0856f7">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=92330fd1-a87f-4c08-8dea-06cdaeeafa69">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7532,12 +7532,12 @@ a.anchor-link {
 </tr>
 <tr>
 <td style="text-align:left"><strong>STEP 2</strong></td>
-<td style="text-align:center">🏃 進行中</td>
+<td style="text-align:center">✅ 完了</td>
 <td style="text-align:left">発振理論の基礎を、水晶発振器の文脈で学ぶ</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>STEP 3</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
+<td style="text-align:center">🏃 進行中</td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -7641,6 +7641,23 @@ $$f_{p} = f_{s} \sqrt{1+\frac{C_{m}}{C_{0}}}$$</li>
 <li>Barkhausen条件と負性抵抗の関係を説明できる。</li>
 <li>「発振する」と「確実に起動する」の違いを説明できる。</li>
 <li>起動時と定常時で支配要因が異なることを理解する。</li>
+</ul>
+<p><strong>💡 学んだこと</strong></p>
+<ul>
+<li>バルクハウンゼンの条件<ul>
+<li>ループゲイン$ A \beta &gt;= 1 $かつ位相条件$360°$であれば発振可能</li>
+</ul>
+</li>
+<li>ただし発振可能だからと言って確実に起動できるわけではない。</li>
+<li>起動時は電源ノイズや熱雑音などの微小信号しか存在していない</li>
+<li>$ A \beta &gt;= 1$を満たしていたとしても発振が成長するために非現実的な時間がかかってしまう
+(あるいはPVTばらつきに耐えられない)</li>
+<li>経験側から起動するためには$負性抵抗 &gt;= 5 * ESR$が必要だと言われている</li>
+<li>上記条件を満たす場合、起動後振幅成長し増幅器のトランジスタが非線形動作となり増幅率が減少する</li>
+<li>振幅は成長し続けるわけではなく振幅制限が起こり、しばらくすると定常状態になる</li>
+<li>まとめると、起動時は回路が水晶の損失以上のエネルギーを供給するため振幅が成長する。</li>
+<li>振幅が大きくなると増幅器の利得あるいは負性抵抗が低下</li>
+<li>最終的に$供給エネルギー=損失エネルギー$となる点、$A \beta = 1 (Rneg = ESR)$で安定</li>
 </ul>
 </details>
 </div>
