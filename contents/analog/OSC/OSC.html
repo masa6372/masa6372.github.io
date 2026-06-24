@@ -7509,157 +7509,163 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=92330fd1-a87f-4c08-8dea-06cdaeeafa69">
+<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=17a128ab-7207-4374-a86d-1457b4200a9f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="%E7%99%BA%E6%8C%AF%E5%9B%9E%E8%B7%AF-%E5%AD%A6%E7%BF%92%E3%83%AD%E3%82%B0">発振回路 学習ログ<a class="anchor-link" href="#%E7%99%BA%E6%8C%AF%E5%9B%9E%E8%B7%AF-%E5%AD%A6%E7%BF%92%E3%83%AD%E3%82%B0">¶</a></h1><h2 id="%F0%9F%93%8A-%E9%80%B2%E6%8D%97%E3%83%AA%E3%82%B9%E3%83%88">📊 進捗リスト<a class="anchor-link" href="#%F0%9F%93%8A-%E9%80%B2%E6%8D%97%E3%83%AA%E3%82%B9%E3%83%88">¶</a></h2><table>
-<thead>
-<tr>
-<th style="text-align:left">STEP</th>
-<th style="text-align:center">ステータス</th>
-<th style="text-align:left">学習テーマ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>STEP 1</strong></td>
-<td style="text-align:center">✅ 完了</td>
-<td style="text-align:left">水晶そのものを理解する</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 2</strong></td>
-<td style="text-align:center">✅ 完了</td>
-<td style="text-align:left">発振理論の基礎を、水晶発振器の文脈で学ぶ</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 3</strong></td>
-<td style="text-align:center">🏃 進行中</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 4</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 5</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 6</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 7</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 8</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 9</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 10</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 11</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>STEP 12</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
-<td style="text-align:left"></td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h2 id="%F0%9F%93%9D-%E5%AD%A6%E7%BF%92%E8%A9%B3%E7%B4%B0%E3%83%8E%E3%83%BC%E3%83%88">📝 学習詳細ノート<a class="anchor-link" href="#%F0%9F%93%9D-%E5%AD%A6%E7%BF%92%E8%A9%B3%E7%B4%B0%E3%83%8E%E3%83%BC%E3%83%88">¶</a></h2><details>
-<summary><b>STEP 1. 水晶そのものを理解する</b></summary>
-<p><strong>🎯 目標</strong></p>
-<ul>
-<li>「なぜ水晶で安定した発振ができるのか」を説明できるようになる。</li>
-</ul>
-<p><strong>📖 学習内容</strong></p>
-<ul>
-<li>直列共振と並列共振の違いを説明できる</li>
-<li>$C_0$ の役割を説明できる</li>
-</ul>
-<p><strong>💡 学んだこと</strong></p>
-<ul>
-<li>水晶には $L_m, C_m, R_m$ と $C_0$ からなる等価回路がある。</li>
-<li>$C_0$ があるため、直列共振と並列共振の2つの共振点が生じる。<ul>
-<li><strong>直列共振周波数</strong>
-$$f_{s} = \frac{1}{2 \pi \sqrt{L_{m}C_{m}}}$$</li>
-<li><strong>並列共振周波数</strong>
-$$f_{p} = f_{s} \sqrt{1+\frac{C_{m}}{C_{0}}}$$</li>
-</ul>
-</li>
-<li>並列共振付近では水晶のインピーダンスが大きくなり、帰還回路の位相条件と利得条件が満たされやすくなる。<ul>
-<li>インピーダンスが最大だと、同じ $g_m$ に対して小信号電圧利得が最大となる。</li>
-<li>電源投入直後、回路には熱雑音の発生させる微弱なノイズしかない。</li>
-<li>そのためバルクハウゼンの条件を満たすためには非常に大きなインピーダンスが必要。</li>
-</ul>
-</li>
-<li>そのためその周波数が選択されて発振する。</li>
-<li>水晶はQ値が非常に高いため周波数選択性が極めて鋭い。</li>
-<li>その結果、発振周波数がほぼ1点に固定され、非常に安定した発振が得られる。</li>
-</ul>
-</details>
-<details>
-<summary><b>STEP 2. 発振理論の基礎を、水晶発振器の文脈で学ぶ</b></summary>
-<p><strong>🎯 目標</strong></p>
-<ul>
-<li>「どういう条件で発振し、なぜ起動するのか」を理解する。</li>
-</ul>
-<p><strong>📖 学習内容</strong></p>
-<ul>
-<li>Barkhausen criterion (バルクハウゼンの条件)</li>
-<li>ループゲイン / Loop gain</li>
-<li>位相条件 / Phase condition</li>
-<li>起動条件 / Start-up condition</li>
-<li>非線形振幅制限 / Nonlinear limiting</li>
-<li>負性抵抗 / Negative resistance</li>
-<li>励振レベル / Drive Level</li>
-</ul>
-<p><strong>🚩 到達目標</strong></p>
-<ul>
-<li>Barkhausen条件と負性抵抗の関係を説明できる。</li>
-<li>「発振する」と「確実に起動する」の違いを説明できる。</li>
-<li>起動時と定常時で支配要因が異なることを理解する。</li>
-</ul>
-<p><strong>💡 学んだこと</strong></p>
-<ul>
-<li>バルクハウンゼンの条件<ul>
-<li>ループゲイン$ A \beta &gt;= 1 $かつ位相条件$360°$であれば発振可能</li>
-</ul>
-</li>
-<li>ただし発振可能だからと言って確実に起動できるわけではない。</li>
-<li>起動時は電源ノイズや熱雑音などの微小信号しか存在していない</li>
-<li>$ A \beta &gt;= 1$を満たしていたとしても発振が成長するために非現実的な時間がかかってしまう
-(あるいはPVTばらつきに耐えられない)</li>
-<li>経験側から起動するためには$負性抵抗 &gt;= 5 * ESR$が必要だと言われている</li>
-<li>上記条件を満たす場合、起動後振幅成長し増幅器のトランジスタが非線形動作となり増幅率が減少する</li>
-<li>振幅は成長し続けるわけではなく振幅制限が起こり、しばらくすると定常状態になる</li>
-<li>まとめると、起動時は回路が水晶の損失以上のエネルギーを供給するため振幅が成長する。</li>
-<li>振幅が大きくなると増幅器の利得あるいは負性抵抗が低下</li>
-<li>最終的に$供給エネルギー=損失エネルギー$となる点、$A \beta = 1 (Rneg = ESR)$で安定</li>
-</ul>
-</details>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 発振回路 学習ログ</span>
+
+<span class="c1">## 📊 進捗リスト</span>
+
+<span class="o">|</span> <span class="n">STEP</span> <span class="o">|</span> <span class="n">ステータス</span> <span class="o">|</span> <span class="n">学習テーマ</span> <span class="o">|</span>
+<span class="o">|</span> <span class="p">:</span><span class="o">---</span> <span class="o">|</span> <span class="p">:</span><span class="o">---</span><span class="p">:</span> <span class="o">|</span> <span class="p">:</span><span class="o">---</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">1</span><span class="o">**</span> <span class="o">|</span> <span class="err">✅</span> <span class="n">完了</span> <span class="o">|</span> <span class="n">水晶そのものを理解する</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">2</span><span class="o">**</span> <span class="o">|</span> <span class="err">✅</span> <span class="n">完了</span> <span class="o">|</span> <span class="n">発振理論の基礎を</span><span class="err">、</span><span class="n">水晶発振器の文脈で学ぶ</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">3</span><span class="o">**</span> <span class="o">|</span> <span class="err">✅</span> <span class="n">完了</span> <span class="o">|</span> <span class="n">Pierce発振器を徹底理解する</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">4</span><span class="o">**</span> <span class="o">|</span> <span class="err">🏃</span> <span class="n">進行中</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">5</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">6</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">7</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">8</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">9</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">10</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">11</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span> <span class="o">**</span><span class="n">STEP</span> <span class="mi">12</span><span class="o">**</span> <span class="o">|</span> <span class="err">⬜</span> <span class="n">未着手</span> <span class="o">|</span> <span class="o">|</span>
+
+<span class="o">---</span>
+
+<span class="c1">## 📝 学習詳細ノート</span>
+
+<span class="o">&lt;</span><span class="n">details</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">summary</span><span class="o">&gt;&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">STEP</span> <span class="mf">1.</span> <span class="n">水晶そのものを理解する</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;&lt;/</span><span class="n">summary</span><span class="o">&gt;</span>
+
+<span class="o">**</span><span class="err">🎯</span> <span class="n">目標</span><span class="o">**</span>
+<span class="o">*</span> <span class="err">「</span><span class="n">なぜ水晶で安定した発振ができるのか</span><span class="err">」</span><span class="n">を説明できるようになる</span><span class="err">。</span>
+
+<span class="o">**</span><span class="err">📖</span> <span class="n">学習内容</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">直列共振と並列共振の違いを説明できる</span>
+<span class="o">*</span> <span class="err">$</span><span class="n">C_0</span><span class="err">$</span> <span class="n">の役割を説明できる</span>
+
+<span class="o">**</span><span class="err">💡</span> <span class="n">学んだこと</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">水晶には</span> <span class="err">$</span><span class="n">L_m</span><span class="p">,</span> <span class="n">C_m</span><span class="p">,</span> <span class="n">R_m</span><span class="err">$</span> <span class="n">と</span> <span class="err">$</span><span class="n">C_0</span><span class="err">$</span> <span class="n">からなる等価回路がある</span><span class="err">。</span>
+<span class="o">*</span> <span class="err">$</span><span class="n">C_0</span><span class="err">$</span> <span class="n">があるため</span><span class="err">、</span><span class="n">直列共振と並列共振の2つの共振点が生じる</span><span class="err">。</span>
+    <span class="o">*</span> <span class="o">**</span><span class="n">直列共振周波数</span><span class="o">**</span>
+      <span class="err">$$</span><span class="n">f_</span><span class="p">{</span><span class="n">s</span><span class="p">}</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="mi">2</span> \<span class="n">pi</span> \<span class="n">sqrt</span><span class="p">{</span><span class="n">L_</span><span class="p">{</span><span class="n">m</span><span class="p">}</span><span class="n">C_</span><span class="p">{</span><span class="n">m</span><span class="p">}}}</span><span class="err">$$</span>
+    <span class="o">*</span> <span class="o">**</span><span class="n">並列共振周波数</span><span class="o">**</span>
+      <span class="err">$$</span><span class="n">f_</span><span class="p">{</span><span class="n">p</span><span class="p">}</span> <span class="o">=</span> <span class="n">f_</span><span class="p">{</span><span class="n">s</span><span class="p">}</span> \<span class="n">sqrt</span><span class="p">{</span><span class="mi">1</span><span class="o">+</span>\<span class="n">frac</span><span class="p">{</span><span class="n">C_</span><span class="p">{</span><span class="n">m</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">0</span><span class="p">}}}</span><span class="err">$$</span>
+<span class="o">*</span> <span class="n">並列共振付近では水晶のインピーダンスが大きくなり</span><span class="err">、</span><span class="n">帰還回路の位相条件と利得条件が満たされやすくなる</span><span class="err">。</span>
+    <span class="o">*</span> <span class="n">インピーダンスが最大だと</span><span class="err">、</span><span class="n">同じ</span> <span class="err">$</span><span class="n">g_m</span><span class="err">$</span> <span class="n">に対して小信号電圧利得が最大となる</span><span class="err">。</span>
+    <span class="o">*</span> <span class="n">電源投入直後</span><span class="err">、</span><span class="n">回路には熱雑音の発生させる微弱なノイズしかない</span><span class="err">。</span>
+    <span class="o">*</span> <span class="n">そのためバルクハウゼンの条件を満たすためには非常に大きなインピーダンスが必要</span><span class="err">。</span>
+<span class="o">*</span> <span class="n">そのためその周波数が選択されて発振する</span><span class="err">。</span>
+<span class="o">*</span> <span class="n">水晶はQ値が非常に高いため周波数選択性が極めて鋭い</span><span class="err">。</span>
+<span class="o">*</span> <span class="n">その結果</span><span class="err">、</span><span class="n">発振周波数がほぼ1点に固定され</span><span class="err">、</span><span class="n">非常に安定した発振が得られる</span><span class="err">。</span>
+
+<span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
+
+
+<span class="o">&lt;</span><span class="n">details</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">summary</span><span class="o">&gt;&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">STEP</span> <span class="mf">2.</span> <span class="n">発振理論の基礎を</span><span class="err">、</span><span class="n">水晶発振器の文脈で学ぶ</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;&lt;/</span><span class="n">summary</span><span class="o">&gt;</span>
+
+<span class="o">**</span><span class="err">🎯</span> <span class="n">目標</span><span class="o">**</span>
+<span class="o">*</span> <span class="err">「</span><span class="n">どういう条件で発振し</span><span class="err">、</span><span class="n">なぜ起動するのか</span><span class="err">」</span><span class="n">を理解する</span><span class="err">。</span>
+
+<span class="o">**</span><span class="err">📖</span> <span class="n">学習内容</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">Barkhausen</span> <span class="n">criterion</span> <span class="p">(</span><span class="n">バルクハウゼンの条件</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">ループゲイン</span> <span class="o">/</span> <span class="n">Loop</span> <span class="n">gain</span>
+<span class="o">*</span> <span class="n">位相条件</span> <span class="o">/</span> <span class="n">Phase</span> <span class="n">condition</span>
+<span class="o">*</span> <span class="n">起動条件</span> <span class="o">/</span> <span class="n">Start</span><span class="o">-</span><span class="n">up</span> <span class="n">condition</span>
+<span class="o">*</span> <span class="n">非線形振幅制限</span> <span class="o">/</span> <span class="n">Nonlinear</span> <span class="n">limiting</span>
+<span class="o">*</span> <span class="n">負性抵抗</span> <span class="o">/</span> <span class="n">Negative</span> <span class="n">resistance</span>
+<span class="o">*</span> <span class="n">励振レベル</span> <span class="o">/</span> <span class="n">Drive</span> <span class="n">Level</span>
+
+<span class="o">**</span><span class="err">🚩</span> <span class="n">到達目標</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">Barkhausen条件と負性抵抗の関係を説明できる</span><span class="err">。</span>
+<span class="o">*</span> <span class="err">「</span><span class="n">発振する</span><span class="err">」</span><span class="n">と</span><span class="err">「</span><span class="n">確実に起動する</span><span class="err">」</span><span class="n">の違いを説明できる</span><span class="err">。</span>
+<span class="o">*</span> <span class="n">起動時と定常時で支配要因が異なることを理解する</span><span class="err">。</span>
+
+<span class="o">**</span><span class="err">💡</span> <span class="n">学んだこと</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">バルクハウンゼンの条件</span>
+    <span class="o">*</span> <span class="n">ループゲイン</span><span class="err">$</span> <span class="n">A</span> \<span class="n">beta</span> \<span class="n">geq</span> <span class="mi">1</span> <span class="err">$</span><span class="n">かつ位相条件</span><span class="err">$</span><span class="mi">360</span><span class="err">°$</span><span class="n">であれば発振可能</span>
+<span class="o">*</span> <span class="n">ただし発振可能だからと言って確実に起動できるわけではない</span><span class="err">。</span>  
+<span class="o">*</span> <span class="n">起動時は電源ノイズや熱雑音などの微小信号しか存在していない</span>
+<span class="o">*</span> <span class="err">$</span> <span class="n">A</span> \<span class="n">beta</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="err">$</span><span class="n">を満たしていたとしても発振が成長するために非現実的な時間がかかってしまう</span>
+<span class="p">(</span><span class="n">あるいはPVTばらつきに耐えられない</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">経験則から起動するためには</span><span class="err">$</span><span class="o">|</span><span class="n">R_</span><span class="p">{</span><span class="n">neg</span><span class="p">}</span><span class="o">|</span> \<span class="n">geq</span> <span class="mi">5</span> \<span class="n">times</span> <span class="n">ESR</span><span class="err">$</span><span class="n">が必要だと言われている</span>
+<span class="o">*</span> <span class="n">上記条件を満たす場合</span><span class="err">、</span><span class="n">起動後振幅成長し増幅器のトランジスタが非線形動作となり増幅率が減少する</span>
+<span class="o">*</span> <span class="n">振幅は成長し続けるわけではなく振幅制限が起こり</span><span class="err">、</span><span class="n">しばらくすると定常状態になる</span>
+<span class="o">*</span> <span class="n">まとめると</span><span class="err">、</span><span class="n">起動時は回路が水晶の損失以上のエネルギーを供給するため振幅が成長する</span><span class="err">。</span>
+<span class="o">*</span> <span class="n">振幅が大きくなると増幅器の利得あるいは負性抵抗が低下</span>
+<span class="o">*</span> <span class="n">最終的に</span><span class="err">$</span><span class="n">供給エネルギー</span><span class="o">=</span><span class="n">損失エネルギー</span><span class="err">$</span><span class="n">となる点</span><span class="err">、$</span><span class="n">A</span> \<span class="n">beta</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">(</span><span class="o">|</span><span class="n">R_</span><span class="p">{</span><span class="n">neg</span><span class="p">}</span><span class="o">|</span> <span class="o">=</span> <span class="n">ESR</span><span class="p">)</span><span class="err">$</span><span class="n">で安定</span>
+
+<span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">details</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">summary</span><span class="o">&gt;&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">Step</span> <span class="mf">3.</span> <span class="n">Pierce発振器を徹底理解する</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;&lt;/</span><span class="n">summary</span><span class="o">&gt;</span>
+<span class="o">**</span><span class="err">🎯</span> <span class="n">目標</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">最も基本的な水晶発振器の構成を</span><span class="err">、</span><span class="n">CMOS回路として説明</span><span class="err">・</span><span class="n">設計できるようにする</span><span class="err">。</span>
+
+<span class="o">**</span><span class="err">📖</span> <span class="n">学習内容</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">Pierce発振器</span> <span class="o">/</span> <span class="n">Pierce</span> <span class="n">oscillator</span>
+<span class="o">*</span> <span class="n">CMOS</span> <span class="n">inverter</span><span class="o">-</span><span class="n">based</span> <span class="n">oscillator</span>
+<span class="o">*</span> <span class="n">帰還抵抗</span> <span class="o">/</span> <span class="n">Feedback</span> <span class="n">resistor</span>
+<span class="o">*</span> <span class="n">負荷容量</span> <span class="o">/</span> <span class="n">Load</span> <span class="n">capacitance</span>
+<span class="o">*</span> <span class="n">バイアス点</span> <span class="o">/</span> <span class="n">Bias</span> <span class="n">point</span>
+<span class="o">*</span> <span class="n">起動性</span> <span class="o">/</span> <span class="n">Start</span><span class="o">-</span><span class="n">up</span> <span class="n">behavior</span>
+
+<span class="o">**</span><span class="err">🚩</span> <span class="n">到達目標</span><span class="o">**</span>
+<span class="o">*</span> <span class="n">Pierce発振器の回路図を描ける</span>
+<span class="o">*</span> <span class="n">各素子</span><span class="err">（</span><span class="n">Rb</span><span class="p">,</span> <span class="n">C1</span><span class="p">,</span> <span class="n">C2</span><span class="p">,</span> <span class="n">crystal</span><span class="err">）</span><span class="n">の役割を説明できる</span>
+<span class="o">*</span> <span class="n">発振周波数が何で決まるか説明できる</span>
+
+<span class="o">**</span><span class="err">💡</span> <span class="n">学んだこと</span><span class="o">**</span>
+    
+<span class="o">*</span> <span class="n">帰還抵抗はAC信号を帰還しているのではなく</span><span class="err">、</span><span class="n">DC的なバイアス点を決めている</span>
+    <span class="o">*</span> <span class="n">自己バイアス</span>  
+    <span class="o">*</span> <span class="n">インバータのゲートに電流はほとんど流れず</span><span class="err">、</span><span class="n">負荷容量にもDCは流れないので帰還抵抗がないと入力DCレベルが定まらない</span>
+    <span class="o">*</span> <span class="n">インバータのgmが最も大きくなるインバータのしきい値付近で落ち着く</span>
+    
+<span class="o">*</span> <span class="o">~~</span><span class="n">負荷容量C1</span><span class="p">,</span> <span class="n">C2で反転増幅器によって180</span><span class="err">°</span><span class="n">位相が遅れた信号をさらに90</span><span class="err">°</span><span class="o">*</span><span class="mi">2</span><span class="n">遅らせて入力へ帰還させている</span><span class="o">~~</span>
+    <span class="o">*</span> <span class="n">発振周波数は水晶と負荷容量のパラメータで決まる</span>
+    
+        <span class="o">*</span> <span class="n">発振周波数</span><span class="err">$</span><span class="n">f_</span><span class="p">{</span><span class="n">OSC</span><span class="p">}</span> \<span class="n">approx</span> <span class="n">f_</span><span class="p">{</span><span class="n">s</span><span class="p">}</span> <span class="o">*</span> \<span class="n">sqrt</span><span class="p">{</span><span class="mi">1</span><span class="o">+</span>\<span class="n">frac</span><span class="p">{</span><span class="n">C_</span><span class="p">{</span><span class="n">m</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span><span class="o">+</span><span class="n">C_</span><span class="p">{</span><span class="n">L</span><span class="p">}}}</span><span class="err">$</span>
+        <span class="o">*</span> <span class="n">このとき</span>
+            <span class="o">*</span> <span class="err">$</span><span class="n">f_s</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="mi">2</span>\<span class="n">pi</span>\<span class="n">sqrt</span><span class="p">{</span><span class="n">L_m</span> <span class="n">C_m</span><span class="p">}}</span><span class="err">$</span>
+            <span class="o">*</span> <span class="err">$</span><span class="n">C_L</span> \<span class="n">approx</span> \<span class="n">frac</span><span class="p">{</span><span class="n">C_1</span> <span class="n">C_2</span><span class="p">}{</span><span class="n">C_1</span> <span class="o">+</span> <span class="n">C_2</span><span class="p">}</span> <span class="o">+</span> <span class="n">C_</span><span class="p">{</span><span class="n">stray</span><span class="p">}</span><span class="err">$</span>
+
+    <span class="o">*</span> <span class="n">負荷容量が付いたときは発振周波数が並列共振周波数から微妙にずれる</span>
+        <span class="o">*</span> <span class="n">AC信号の帰還ネットワークは負荷容量</span><span class="o">+</span><span class="n">水晶</span><span class="p">(</span><span class="n">高Qな誘導性素子</span><span class="p">)</span><span class="n">で形成</span>
+
+<span class="o">*</span> <span class="n">負性抵抗の導出</span>
+
+    <span class="o">![</span>負性抵抗<span class="o">](</span>./image/negR.png<span class="w"> </span><span class="s2">"negR"</span><span class="o">)</span>
+    <span class="o">*</span> <span class="err">$</span><span class="n">M_1</span><span class="err">$</span><span class="n">のゲートソース間に発生する電圧は</span><span class="err">$</span><span class="n">V_</span><span class="p">{</span><span class="n">GS</span><span class="p">}</span> <span class="o">=</span> <span class="o">-</span>\<span class="n">frac</span><span class="p">{</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">s</span><span class="p">}</span><span class="err">$</span>
+    <span class="o">*</span> <span class="n">ドレイン電流は</span><span class="err">$</span><span class="n">I_</span><span class="p">{</span><span class="n">d</span><span class="p">}</span> <span class="o">=</span> <span class="o">-</span><span class="n">g_</span><span class="p">{</span><span class="n">m</span><span class="p">}</span><span class="o">*</span>\<span class="n">frac</span><span class="p">{</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">s</span><span class="p">}</span><span class="err">$</span>
+    <span class="o">*</span> <span class="n">C2に流れる電流は</span><span class="err">$</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}</span><span class="o">-</span><span class="n">g_</span><span class="p">{</span><span class="n">m</span><span class="p">}</span><span class="o">*</span>\<span class="n">frac</span><span class="p">{</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">s</span><span class="p">}</span><span class="err">$</span>
+    <span class="o">*</span> <span class="n">C2に発生する電圧は</span><span class="err">$</span>\<span class="n">frac</span><span class="p">{(</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}</span><span class="o">-</span><span class="n">g_</span><span class="p">{</span><span class="n">m</span><span class="p">}</span><span class="o">*</span>\<span class="n">frac</span><span class="p">{</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">s</span><span class="p">})}{</span><span class="n">sC_</span><span class="p">{</span><span class="mi">2</span><span class="p">}}</span><span class="err">$・・・①</span>
+    <span class="o">*</span> <span class="n">C2に発生する電圧は</span><span class="err">$</span><span class="n">V_</span><span class="p">{</span><span class="n">X</span><span class="p">}</span><span class="o">+</span><span class="n">V_</span><span class="p">{</span><span class="n">GS</span><span class="p">}</span> <span class="o">=</span> <span class="n">V_</span><span class="p">{</span><span class="n">X</span><span class="p">}</span> <span class="o">-</span> \<span class="n">frac</span><span class="p">{</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">s</span><span class="p">}</span><span class="err">$・・・②</span>
+    <span class="o">*</span> <span class="err">①、②</span><span class="n">より二つの端子から回路を見込んだインピーダンスは</span><span class="err">$</span><span class="n">Z</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="n">V_</span><span class="p">{</span><span class="n">X</span><span class="p">}}{</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}}(</span><span class="n">s</span><span class="p">)</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">sC_</span><span class="p">{</span><span class="mi">1</span><span class="p">}}</span><span class="o">+</span>\<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">sC_</span><span class="p">{</span><span class="mi">2</span><span class="p">}}</span><span class="o">+</span>\<span class="n">frac</span><span class="p">{</span><span class="n">g_</span><span class="p">{</span><span class="n">m</span><span class="p">}}{</span><span class="n">s</span><span class="o">^</span><span class="mi">2</span> <span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">C_</span><span class="p">{</span><span class="mi">2</span><span class="p">}}</span><span class="err">$</span>
+    <span class="o">*</span> <span class="err">$</span><span class="n">Z</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="n">V_</span><span class="p">{</span><span class="n">X</span><span class="p">}}{</span><span class="n">I_</span><span class="p">{</span><span class="n">X</span><span class="p">}}(</span><span class="n">j</span>\<span class="n">omega</span><span class="p">)</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">j</span> \<span class="n">omega</span> <span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}}</span><span class="o">+</span>\<span class="n">frac</span><span class="p">{</span><span class="mi">1</span><span class="p">}{</span><span class="n">j</span> \<span class="n">omega</span> <span class="n">C_</span><span class="p">{</span><span class="mi">2</span><span class="p">}}</span><span class="o">-</span>\<span class="n">frac</span><span class="p">{</span><span class="n">g_</span><span class="p">{</span><span class="n">m</span><span class="p">}}{</span>\<span class="n">omega</span><span class="o">^</span><span class="mi">2</span> <span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="n">C_</span><span class="p">{</span><span class="mi">2</span><span class="p">}}</span><span class="err">$</span>
+
+<span class="o">*</span> <span class="n">起動特性と負性抵抗のトレードオフ</span>
+
+    <span class="o">*</span> <span class="n">負性抵抗を大きくするためには</span><span class="err">$</span><span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">C_</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="err">$</span><span class="n">を小さくしたい</span>
+    <span class="o">*</span> <span class="n">ただし</span><span class="err">、</span><span class="n">発振周波数</span><span class="err">$</span><span class="n">f_</span><span class="p">{</span><span class="n">OSC</span><span class="p">}</span> \<span class="n">approx</span> <span class="n">f_</span><span class="p">{</span><span class="n">s</span><span class="p">}</span> <span class="o">*</span> \<span class="n">sqrt</span><span class="p">{</span><span class="mi">1</span><span class="o">+</span>\<span class="n">frac</span><span class="p">{</span><span class="n">C_</span><span class="p">{</span><span class="n">m</span><span class="p">}}{</span><span class="n">C_</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span><span class="o">+</span><span class="n">C_</span><span class="p">{</span><span class="n">L</span><span class="p">}}}</span><span class="err">$</span><span class="n">で決まるため</span><span class="err">$</span><span class="n">C_</span><span class="p">{</span><span class="mi">1</span><span class="p">},</span> <span class="n">C_</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="err">$</span><span class="n">を小さくしすぎると</span><span class="err">、</span><span class="n">直列容量も小さくなり</span><span class="err">、$</span><span class="n">C_</span><span class="p">{</span><span class="n">stray</span><span class="p">}</span><span class="err">$</span><span class="n">のような寄生容量の影響が強く見えてしまう</span>
+    <span class="o">*</span> <span class="n">周波数精度と起動特性がトレードオフ</span>
+
+<span class="o">*</span> <span class="n">励振レベル</span>
+
+    <span class="o">*</span> <span class="n">起動後定常状態では</span><span class="err">$</span><span class="n">R_</span><span class="p">{</span><span class="n">neg</span><span class="p">}</span><span class="o">=</span><span class="n">ESR</span><span class="err">$</span><span class="n">となる</span>
+    <span class="o">*</span> <span class="n">水晶に投入される電力は</span><span class="err">$</span><span class="n">P_</span><span class="p">{</span><span class="n">drive</span><span class="p">}</span> <span class="o">=</span> <span class="p">{</span><span class="n">I_</span><span class="p">{</span><span class="n">x</span><span class="p">}}</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">ESR</span><span class="err">$</span>
+    <span class="o">*</span> <span class="n">起動余裕を確保しつつ励振レベルが大きくなり過ぎないようにすることが必要</span>
+
+<span class="o">&lt;/</span><span class="n">details</span><span class="o">&gt;</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
