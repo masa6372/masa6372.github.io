@@ -48,12 +48,29 @@
 </details>
 
 <details>
-<summary><b>⬜️ 第4問</b></summary>
+<summary><b>✅ 第4問</b></summary>
 
-（ここに内容を追加）
+**【重要語彙・表現】**
+* **the ＋ 形容詞**：～な人々（例：`the sickly` = sickly people）
+* **men of affairs**：実務家、実業家（= men of business）
+* **go to a good deal of trouble to do**：非常に骨を折って（わざわざ）〜するthe + 形容詞は～な人々
+
+**【構文把握の課題：目的語（O）の前置と挿入句】**
+* **対象文:** What Epicurus, who never travelled except when he was banished from his country, sought in his own garden, our tourists seek abroad.
+* **分析① OSVの語順:** 本来の語順は Our tourists(S) seek(V) [what Epicurus...](O) abroad.。目的語（O）である what の名詞節が強調されて文頭に出ている構造を見抜く。
+
+**【構文把握の課題：Onlyによる倒置と、他動詞・that節の分離】**
+* **対象文:** Only when they can band together and pretend, for a brief, precarious hour, that they are at home, do the majority of tourists look really happy.
+* **分析① Onlyの倒置:** Only when ~（〜する時にのみ）という副詞節が文頭に出たため、主節が疑問文の語順（do(助) + S + V）に倒置されている。「なぜここに do があるのか」を見抜くのが鍵。
+* **分析② 挿入句:** pretend と目的語の that節 の間に , for a brief, precarious hour ,（短く不安定な時間だけ）という副詞句が挿入され、骨格を分断している。
+* **重要表現:** band together（群れをなす、集まる）、precarious（不安定な、危うい）、at home（くつろいで、自国・自宅にいて）
 
 </details>
 
+<details>
+<summary><b>⬜️ 第5問</b></summary>
+
+</details>
 
 ## 中期20題
 
