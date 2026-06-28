@@ -53,7 +53,7 @@
 **【重要語彙・表現】**
 * **the ＋ 形容詞**：～な人々（例：`the sickly` = sickly people）
 * **men of affairs**：実務家、実業家（= men of business）
-* **go to a good deal of trouble to do**：非常に骨を折って（わざわざ）〜するthe + 形容詞は～な人々
+* **go to a good deal of trouble to do**：非常に骨を折って（わざわざ）
 
 **【構文把握の課題：目的語（O）の前置と挿入句】**
 * **対象文:** What Epicurus, who never travelled except when he was banished from his country, sought in his own garden, our tourists seek abroad.
