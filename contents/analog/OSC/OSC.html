@@ -7510,7 +7510,7 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8192c38-3319-4ecf-92ca-cf75f6581603">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b397c406-0ad3-4496-a0a8-d9600fa038a0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7542,12 +7542,12 @@ a.anchor-link {
 </tr>
 <tr>
 <td style="text-align:left"><strong>STEP 4</strong></td>
-<td style="text-align:center">🏃 進行中</td>
-<td style="text-align:left"></td>
+<td style="text-align:center">✅ 完了</td>
+<td style="text-align:left">負荷容量・寄生容量・周波数誤差を理解する</td>
 </tr>
 <tr>
 <td style="text-align:left"><strong>STEP 5</strong></td>
-<td style="text-align:center">⬜ 未着手</td>
+<td style="text-align:center">🏃 進行中</td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -7622,10 +7622,9 @@ $$f_{p} = f_{s} \sqrt{1+\frac{C_{m}}{C_{0}}}$$</li>
 </details>
 <details>
 <summary><b>STEP 2. 発振理論の基礎を、水晶発振器の文脈で学ぶ</b></summary>
-<p><strong>🎯 目標</strong></p>
-<ul>
-<li>「どういう条件で発振し、なぜ起動するのか」を理解する。</li>
-</ul>
+**🎯 目標**
+* 「どういう条件で発振し、なぜ起動するのか」を理解する。
+
 <p><strong>📖 学習内容</strong></p>
 <ul>
 <li>Barkhausen criterion (バルクハウゼンの条件)</li>
@@ -7662,9 +7661,10 @@ $$f_{p} = f_{s} \sqrt{1+\frac{C_{m}}{C_{0}}}$$</li>
 </details>
 <details>
 <summary><b>Step 3. Pierce発振器を徹底理解する</b></summary>
-**🎯 目標**
-* 最も基本的な水晶発振器の構成を、CMOS回路として説明・設計できるようにする。
-
+<p><strong>🎯 目標</strong></p>
+<ul>
+<li>最も基本的な水晶発振器の構成を、CMOS回路として説明・設計できるようにする。</li>
+</ul>
 <p><strong>📖 学習内容</strong></p>
 <ul>
 <li>Pierce発振器 / Pierce oscillator</li>
@@ -7736,7 +7736,85 @@ $$f_{p} = f_{s} \sqrt{1+\frac{C_{m}}{C_{0}}}$$</li>
 </li>
 </ul>
 </details>
-</div>
+<details>
+<summary><b>Step 4. 負荷容量・寄生容量・周波数誤差を理解する</b></summary>
+<p><strong>🎯 目標</strong>
+*「狙った周波数にならない理由」を説明できるようにする。</p>
+<p><strong>📖 学習内容</strong></p>
+<ul>
+<li>Load capacitance (CL)</li>
+<li>Parasitic capacitance</li>
+<li>Pulling</li>
+<li>Frequency offset</li>
+<li>Package/Pad/ESD capacitance</li>
+<li>PCB parasitics</li>
+</ul>
+<p><strong>🚩 到達目標</strong></p>
+<ul>
+<li>実効CLの概念を説明できる</li>
+<li>パッド容量やESD容量が周波数に与える影響を説明できる</li>
+<li>回路設計者として寄生をどう見積もるか整理できる</li>
+</ul>
+<p><strong>💡 学んだこと</strong></p>
+<ul>
+<li><p>負荷容量と発振周波数の関係</p>
+<ul>
+<li>Pierce発振器の発振周波数は負荷共振周波数付近となり、
+$$f_{OSC} \approx f_s \sqrt{1+\frac{C_m}{C_0+C_L}}$$
+で近似できる。</li>
+<li>このとき
+$$f_s=\frac{1}{2\pi\sqrt{L_mC_m}}$$
+である。</li>
+<li>周波数偏差は
+$$\frac{\Delta f}{f_s}=\frac{f_{OSC}-f_s}{f_s}=\sqrt{1+\frac{C_m}{C_0+C_L}}-1$$</li>
+<li>$\frac{C_m}{C_0+C_L}\ll 1$なので、テイラー展開により
+$$\frac{\Delta f}{f_s}\approx \frac{C_m}{2(C_0+C_L)}$$
+となる。</li>
+<li>水晶の容量比を
+$$\gamma=\frac{C_0}{C_m}$$
+と定義すると、
+$$\frac{\Delta f}{f_s}\approx \frac{1}{2\gamma\left(1+\frac{C_L}{C_0}\right)}$$
+と表せる。</li>
+<li>$\gamma$が大きいほど、負荷容量による周波数の引っ張り量は小さい。</li>
+<li>逆に$\gamma$が小さいほど、負荷容量による周波数感度は大きくなる。</li>
+</ul>
+</li>
+<li><p>実効負荷容量</p>
+<ul>
+<li>実際の負荷容量は理想的な$C_1, C_2$だけでは決まらない。</li>
+<li>水晶が見る実効負荷容量は、
+$$C_{L,eff}\approx \frac{(C_1+C_{p1})(C_2+C_{p2})}{(C_1+C_{p1})+(C_2+C_{p2})}$$
+と見積もれる。</li>
+<li>ここで$C_{p1}, C_{p2}$には、ICパッド容量、ESD容量、パッケージ容量、PCB寄生容量、入力容量、出力容量などが含まれる。</li>
+<li>簡易的には
+$$C_{L,eff}\approx \frac{C_1C_2}{C_1+C_2}+C_{stray}$$
+と考える。</li>
+</ul>
+</li>
+<li><p>負荷容量と周波数ずれ</p>
+<ul>
+<li>$C_{L,eff}$が大きいほど、発振周波数は低くなる。</li>
+<li>$C_{L,eff}$が小さいほど、発振周波数は高くなる。</li>
+<li>したがって、パッド容量、ESD容量、パッケージ容量、PCB容量を無視すると、狙った周波数からずれる。</li>
+</ul>
+</li>
+<li><p>Pulling</p>
+<ul>
+<li>Pullingとは、負荷容量の変化によって水晶の発振周波数が引っ張られる現象である。</li>
+<li>負荷容量感度が大きいほど、広い周波数調整範囲を得られる。</li>
+<li>一方で、容量ノイズや制御電圧ノイズも周波数変動に変換されやすくなる。</li>
+</ul>
+</li>
+<li><p>チューニングレンジと位相ノイズ</p>
+<ul>
+<li>温度補償の幅、すなわちチューニングレンジを広げるためには、周波数感度を大きくする必要がある。</li>
+<li>しかし感度を大きくすると、微小な容量変動や制御電圧ノイズが周波数変動として拡大される。</li>
+<li>その結果、周波数ノイズが増え、位相ノイズやジッタが悪化しやすい。</li>
+<li>したがって、チューニングレンジと位相ノイズはトレードオフになる。</li>
+</ul>
+</li>
+</ul>
+</details></div>
 </div>
 </div>
 </div>
