@@ -218,9 +218,50 @@
 <ul>
 <li>Day 1：PLLの用途を整理する
 <ul>
-<li>RF synthesizer、clock generator、SerDes clock、jitter cleaner の違いを調べる</li>
-<li>PLLの入力、出力、分周比、リファレンス周波数の関係を整理する</li>
-<li>出力周波数が Fout = N × Fref になる理由を説明できるようにする</li>
+<li>
+<p>RF synthesizer、clock generator、SerDes clock、jitter cleaner の違いを調べる</p>
+</li>
+<li>
+<p>PLLは入力に対してLPF</p>
+</li>
+<li>
+<p>PLLはVCOに対してHPF</p>
+<ul>
+<li>VCOがノイズ源か入力がノイズ源かでPLLを広帯域にするのか狭帯域にするのかが変わる
+<ul>
+<li>RF synthesizer
+<ul>
+<li>隣接する通信チャネルへ干渉したくないので特定のオフセット周波数における位相雑音を下げたい</li>
+<li>入力ノイズとVCOノイズのバランスを重視</li>
+</ul>
+</li>
+<li>Clock generator
+<ul>
+<li>入力を複数のクロックに分配</li>
+</ul>
+</li>
+<li>SerDes Clock
+<ul>
+<li>高速通信用の信号で入力は水晶のようなクリーンな信号</li>
+<li>ジッタを極限まで下げたいので広帯域にする</li>
+</ul>
+</li>
+<li>Jitter Cleaner
+<ul>
+<li>汚れた入力信号のジッタを低減したい</li>
+<li>狭帯域にして外部から来る高ジッタ信号を低減</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>出力周波数が Fout = N × Fref になる理由を説明できるようにする</p>
+<ul>
+<li>Fout/N = Frefになるようにフィードバックがかけられるため</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
