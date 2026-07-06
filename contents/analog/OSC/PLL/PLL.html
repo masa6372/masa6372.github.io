@@ -18,7 +18,8 @@
 }
 
 </style>
-            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
@@ -215,6 +216,8 @@
 <h2 id="-学習詳細ノート">📝 学習詳細ノート</h2>
 <details>
 <summary><b>STEP 1. PLLの全体像と位相領域の考え方</b></summary>
+<details>
+<summary><b>Day 1：PLLの用途を整理する  </b></summary>
 <ul>
 <li>Day 1：PLLの用途を整理する
 <ul>
@@ -266,7 +269,69 @@
 </li>
 </ul>
 </details>
-            
+<details>
+<summary><b>Day 2：基本ブロックを理解する</b></summary>
+<ul>
+<li>Day 2：基本ブロックを理解する
+<ul>
+<li>
+<p>PFD、CP、Loop Filter、VCO、Divider の役割を1枚の図にまとめる</p>
+</li>
+<li>
+<p>各ブロックの入力/出力信号を整理する</p>
+</li>
+<li>
+<p>位相、周波数、電圧、電流のどれを扱うブロックかを明確にする</p>
+</li>
+<li>
+<p>PFD (Phase Frequency Detector)</p>
+<ul>
+<li>帰還した信号とリファレンス信号を比較
+<ul>
+<li>周波数がロックするまでは周波数比較器として動作</li>
+<li>ロック後は位相比較器</li>
+</ul>
+</li>
+<li>位相差を進み、遅れに応じてデジタルパルスΔtで出力
+<ul>
+<li>リファレンスが早い→Upパルス</li>
+<li>Feedbackが早い→Downパルス</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>CP (Charge Pump)</p>
+<ul>
+<li>デジタルパルスΔtの時間に応じて定電流源から電流を出力して容量を充放電</li>
+<li>時間情報を電荷に変換 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><msub><mi>I</mi><mrow><mi>C</mi><mi>P</mi></mrow></msub><mi>δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex"> Q = I_{CP}\delta t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">CP</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mord mathnormal">t</span></span></span></span></li>
+</ul>
+</li>
+<li>
+<p>LF (Loop Filter)</p>
+<ul>
+<li>チャージポンプからの電流を平滑化</li>
+<li>抵抗と容量のフィルタにより電流を電圧へ変換</li>
+</ul>
+</li>
+<li>
+<p>VCO (Voltage Controlled Oscillator)</p>
+<ul>
+<li>LFの出力に応じた出力周波数を発生</li>
+</ul>
+</li>
+<li>
+<p>Divider</p>
+<ul>
+<li>VCOの出力を1/N倍して入力へ帰還</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+</details>
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
             
         </body>
         </html>

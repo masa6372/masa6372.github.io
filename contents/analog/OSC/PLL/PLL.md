@@ -22,6 +22,9 @@
 <details>
 <summary><b>STEP 1. PLLの全体像と位相領域の考え方</b></summary>
 
+<details>
+<summary><b>Day 1：PLLの用途を整理する  </b></summary>
+
 * Day 1：PLLの用途を整理する  
 	* RF synthesizer、clock generator、SerDes clock、jitter cleaner の違いを調べる
 	* PLLは入力に対してLPF
@@ -41,5 +44,31 @@
 
 	* 出力周波数が Fout = N × Fref になる理由を説明できるようにする
 		- Fout/N = Frefになるようにフィードバックがかけられるため
+</details>
+<details>
+<summary><b>Day 2：基本ブロックを理解する</b></summary>
 
+* Day 2：基本ブロックを理解する
+	* PFD、CP、Loop Filter、VCO、Divider の役割を1枚の図にまとめる
+	* 各ブロックの入力/出力信号を整理する
+	* 位相、周波数、電圧、電流のどれを扱うブロックかを明確にする
+
+	* PFD (Phase Frequency Detector)
+    	* 帰還した信号とリファレンス信号を比較
+        	* 周波数がロックするまでは周波数比較器として動作
+        	* ロック後は位相比較器
+      	* 位相差を進み、遅れに応じてデジタルパルスΔtで出力
+			* リファレンスが早い→Upパルス
+			* Feedbackが早い→Downパルス
+  	* CP (Charge Pump)
+		* デジタルパルスΔtの時間に応じて定電流源から電流を出力して容量を充放電
+		* 時間情報を電荷に変換 $ Q = I_{CP}\delta t$
+	* LF (Loop Filter)
+		* チャージポンプからの電流を平滑化
+		* 抵抗と容量のフィルタにより電流を電圧へ変換
+	* VCO (Voltage Controlled Oscillator)
+		* LFの出力に応じた出力周波数を発生
+    * Divider
+        * VCOの出力を1/N倍して入力へ帰還
+</details>
 </details>
