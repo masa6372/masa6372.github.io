@@ -68,7 +68,18 @@
 </details>
 
 <details>
-<summary><b>⬜️ 第5問</b></summary>
+<summary><b>✅ 第8問</b></summary>
+
+* 対象文: The masses are likely to replace an unchanging mode of life by fashion which it will be in the economic interest of certain people to change as often as possible.  
+**【重要語彙・表現】**  
+* replace A by B: AをBに置き換える(replace A with Bと同じ)  
+**【構文把握の課題：関係詞内の「仮主語 it」と「移動した目的語」】**  
+* **分析** 欠落した目的語（O）: to change の目的語が欠けており、それが先行詞の which（＝fashion）である。
+ 
+</details>
+
+<details>
+<summary><b>✅ 第9問</b></summary>
 
 </details>
 
