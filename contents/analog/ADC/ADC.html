@@ -146,11 +146,11 @@
 <h2 id="1次δσadc">1次ΔΣADC</h2>
 <h3 id="1bit-δσadc回路">1bit ΔΣADC回路</h3>
 <p>教科書に掲載されている1次1bit ΔΣADC回路。</p>
-<p><img src="file:///c:\Users\a1059277\OneDrive - 旭化成株式会社\masa6372.github.io-main\contents\analog\ADC\image\ideal_DeltaSigma.png" alt="1次理想ADC" title="ideal_DeltaSigma"></p>
+<p><img src="file:///c:\Users\songp\masa6372.github.io-main\contents\analog\ADC\image\ideal_DeltaSigma.png" alt="1次理想ADC" title="ideal_DeltaSigma"></p>
 <hr>
 <h2 id="理想素子による実装">理想素子による実装</h2>
 <p>Cadence Virtuoso上で理想素子を用いて1次ΔΣADCを構成した。</p>
-<p><img src="file:///c:\Users\a1059277\OneDrive - 旭化成株式会社\masa6372.github.io-main\contents\analog\ADC\image\DeltaSigma.png" alt="1次ADC" title="DeltaSigma"></p>
+<p><img src="file:///c:\Users\songp\masa6372.github.io-main\contents\analog\ADC\image\DeltaSigma.png" alt="1次ADC" title="DeltaSigma"></p>
 <h3 id="構成">構成</h3>
 <ul>
 <li>スイッチトキャパシタ積分器</li>
@@ -190,7 +190,7 @@
 </tbody>
 </table>
 <h3 id="出力波形">出力波形</h3>
-<p><img src="file:///c:\Users\a1059277\OneDrive - 旭化成株式会社\masa6372.github.io-main\contents\analog\ADC\image\VDAC.png" alt="出力波形" title="VDAC"></p>
+<p><img src="file:///c:\Users\songp\masa6372.github.io-main\contents\analog\ADC\image\VDAC.png" alt="出力波形" title="VDAC"></p>
 <p>入力信号に応じてパルス密度が変化していることを確認した。
 入力電圧が高い領域ではHighが多くなり、入力電圧が低い領域ではLowが多くなる。
 1bit ΔΣADCにおける典型的な粗密波が得られた。</p>
@@ -199,9 +199,9 @@
 <p>入力信号を加えず、微小DCオフセットを与えた状態でFFTを実施した。</p>
 <h3 id="ノイズシェーピング特性">ノイズシェーピング特性</h3>
 <p>ディザが無いと量子化雑音がないので意図したハイパス特性がみられない
-<img src="file:///c:\Users\a1059277\OneDrive - 旭化成株式会社\masa6372.github.io-main\contents\analog\ADC\image\%E3%83%87%E3%82%A3%E3%82%B6%E3%81%AA%E3%81%97.png" alt="出力波形" title="ディザなし"></p>
+<img src="file:///c:\Users\songp\masa6372.github.io-main\contents\analog\ADC\image\%E3%83%87%E3%82%A3%E3%82%B6%E3%81%AA%E3%81%97.png" alt="出力波形" title="ディザなし"></p>
 <p>ディザあり(0.5LSBで平均値が0Vに設定)だとハイパス特性が見られた
-<img src="file:///c:\Users\a1059277\OneDrive - 旭化成株式会社\masa6372.github.io-main\contents\analog\ADC\image\%E3%83%87%E3%82%A3%E3%82%B6%E3%81%82%E3%82%8A.png" alt="出力波形" title="ディザあり"></p>
+<img src="file:///c:\Users\songp\masa6372.github.io-main\contents\analog\ADC\image\%E3%83%87%E3%82%A3%E3%82%B6%E3%81%82%E3%82%8A.png" alt="出力波形" title="ディザあり"></p>
 <h3 id="fft条件">FFT条件</h3>
 <table>
 <thead>
@@ -226,7 +226,7 @@
 </tbody>
 </table>
 <h3 id="出力fft結果">出力FFT結果</h3>
-<p><img src="file:///c:\Users\a1059277\OneDrive - 旭化成株式会社\masa6372.github.io-main\contents\analog\ADC\image\VDAC_FFT.png" alt="VDAC_FFT" title="VDAC_FFT"></p>
+<p><img src="file:///c:\Users\songp\masa6372.github.io-main\contents\analog\ADC\image\VDAC_FFT.png" alt="VDAC_FFT" title="VDAC_FFT"></p>
 <h2 id="スペクトル表現の違い">スペクトル表現の違い</h2>
 <p>FFT/DFTの結果は目的に応じて様々な形で表現される。</p>
 <table>
