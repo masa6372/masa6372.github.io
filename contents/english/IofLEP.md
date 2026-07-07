@@ -81,6 +81,24 @@
 <details>
 <summary><b>✅ 第9問</b></summary>
 
+* 対象文: This search is the more successful the more it is directed towards finding truth for its own sake.   
+**分析① the 比較級のバリエーション**   
+The 比較級(条件), the 比較級(結果) の構文で、「結果（主節）」が先に来ているパターン  
+**【重要語彙・表現】**  
+for its own sake: ~それ自身のために  
+
+* 類題: Entertain them the more seriously the more they differ from your own.  
+**【類題：主節先行の「the 比較級」と多義語 entertain】**
+* **対象文:** Entertain them the more seriously the more they differ from your own.
+* **重要語彙 (entertain):** ここでの `entertain` は「楽しませる」ではなく、**「（意見や考えなどを）心に抱く、考慮する、検討する」**という意味。長文読解で非常に狙われやすい多義語。
+* **分析:** `[Entertain them the more seriously (結果・命令文)]` `[the more they differ from your own (条件)]`。主節が命令文になっているパターン。`them` や `your own` は文脈上の「意見（opinions / ideas）」などを指す。
+> **和訳:** それら（の意見）があなた自身の（意見）と異なっていればいるほど、より真剣にそれらを検討しなさい（心に留めなさい）。
+
+</details>
+
+<details>
+<summary><b>✅ 第10問</b></summary>
+
 </details>
 
 ## 中期20題
