@@ -71,4 +71,31 @@
     * Divider
         * VCOの出力を1/N倍して入力へ帰還
 </details>
+
+<details>
+<summary><b>Day 3：位相と周波数の関係を復習</b></summary>
+
+* Day 3 位相と周波数の関係を復習
+    * 周波数は位相の時間微分であることを確認
+	* VCOを”入力電圧で位相の傾きが変わる積分器"として理解
+	* VCO=integratorという視点を身に着ける
+* 位相と周波数の関係
+	* $\omega = \frac{d\phi}{dt}$
+	* $\phi = \int \omega dt $
+	* $\omega = 2\pi f$より
+	* $\phi = 2\pi \int f dt$となるので、位相は周波数の時間積分
+	* 反対に周波数は位相の時間微分
+
+* VCOの伝達関数を考える
+    * $\omega_{out}=K_{VCO}V_{CTRL}+\omega_{0}$で出力周波数が変動
+    * $K_{VCO}$の単位は$rad/s/V$で表せる
+	* $\omega_{out}=K_{VCO}V_{CTRL}+\omega_{0}$より
+	* $\frac{d\phi}{dt} = \omega_{0}+K_{VCO}V_{CTRL}$が得られる
+	* $\phi = K_{VCO}\int V_{CTRL}dt+\omega_{0} t$tに関して積分すると
+	* 周波数領域に変換すると、伝達関数は
+	* $\Phi = K_{VCO} V_{CTRL}/s$となる
+	* $\frac{\Phi}{V_{CTRL}}(s) = \frac{K_{VCO}}{s} $が伝達関数として得られる
+	* VCOは制御電圧を周波数に変換し、その周波数を積分して位相を出力するブロック
+
+</details>
 </details>
