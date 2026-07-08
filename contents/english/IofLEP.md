@@ -99,6 +99,24 @@ for its own sake: ~それ自身のために
 <details>
 <summary><b>✅ 第10問</b></summary>
 
+* **対象文:**
+* I scarcely ever heard or saw the introductory words, "Without vanity I may say, " etc., but some vain thing immediately followed.
+* *構文* 否定語~but SV(~すれば必ず~する)
+**【重要語彙・表現】**  
+* vanity: うぬぼれ、虚栄心
+* without vanity i may say: 自慢じゃないが、言わせてもらえば
+
+**【類題：関係代名詞の働きをする but（擬似関係代名詞）】**
+* **対象文:** There was not a line in her countenance, not a note in her soft and sleepy voice, but spoke of an entire contentment with her life.
+* **重要語彙:** `countenance`（顔つき、表情）、`contentment`（満足）、`speak of ~`（〜を物語る、示す）
+* **分析① 擬似関係代名詞:** `but` の後ろに主語が欠けているため、この `but` は先行詞（line / note）を受ける関係代名詞の働きをしている。`but` ＝ `that ... not`。
+* **分析② 構造の骨格:** `There was not [A], not [B], but(that didn't) spoke of [C].` ＝ 「Cを物語らないようなAやBはなかった」＝「AやBはどれもCを物語っていた」。
+> **和訳:** 彼女の顔立ちのどの線も、その柔らかく眠たげな声のどの調子も、彼女が自分の生活に完全に満足していることを物語っていないものはなかった（＝すべてがその満足を物語っていた）。
+</details>
+
+<details>
+<summary><b>✅ 第11問</b></summary>
+
 </details>
 
 ## 中期20題
