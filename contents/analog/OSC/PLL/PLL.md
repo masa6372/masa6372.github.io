@@ -98,4 +98,27 @@
 	* VCOは制御電圧を周波数に変換し、その周波数を積分して位相を出力するブロック
 
 </details>
+
+
+<details>
+<summary><b>Day 4：Integer-N PLLのロック条件を理解する</b></summary>
+
+* Day4：Integer-N PLLロック条件を理解する
+	* ロック時の Fout / N = Fref を導出する
+	* 位相誤差がゼロまたは一定値になる意味を整理する
+	* 周波数ロックと位相ロックの違いを説明する
+* Integer-N PLLは$f_{ref}=f_{div}$となるようにフィードバックをかける
+	* $f_{div}=f_{out}/N$より
+	* $f_{out}=N\times f_{ref}$
+* $f_{e}=f_{ref}-f_{div}=0$のとき
+	* $\omega_{ref}-\omega_{div}=0$となるので
+	* $\frac{d}{dt}(\phi_{ref}-\phi_{div})=Const\,or\,0$となる
+	* $\phi_{ref}-\phi_{div}=Const\,or\,0$となる
+	* 位相ロックしているならば周波数はロックしている
+	* 周波数ロックしているとしても位相差は0とは限らず一定値をとるかもしれない
+* Type-Ⅰ PLLとType-Ⅱ PLL
+  * TypeはPLLのループ内に含まれる積分器の数を表す
+  * VCOは積分動作のため必ずType-Ⅰ以上にはなる
+
+</details>
 </details>
