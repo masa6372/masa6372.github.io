@@ -4,8 +4,8 @@
 
 | STEP | ステータス | 学習テーマ |
 | :--- | :---: | :--- |
-| **STEP 1** | 🏃 進行中  | PLLの全体像と位相領域の考え方 |
-| **STEP 2** | ⬜ 未着手 |  |
+| **STEP 1** | ✅ 完了 | PLLの全体像と位相領域の考え方 |
+| **STEP 2** | 🏃 進行中 |  |
 | **STEP 3** | ⬜ 未着手 |  |
 | **STEP 4** | ⬜ 未着手 | |
 | **STEP 5** | ⬜ 未着手  | |
@@ -121,4 +121,23 @@
   * VCOは積分動作のため必ずType-Ⅰ以上にはなる
 
 </details>
+</details>
+
+<details>
+<summary><b>STEP 2. 線形モデル、ループ帯域、安定性</b></summary>
+
+
+<details>
+<summary><b>Day 1. PFD/CPのゲインを定義する</b></summary>
+
+* Day1 ：PFD/CPのゲインを定義する
+	* PFD/CPを位相差から電流への変換器としてモデル化する
+	* KPD の単位を確認する
+	* CP電流と位相誤差の関係を理解する
+		* CPはPFDの出力パルスが出ているときだけ電流$I_{CP}$を流す
+		  * 1周期あたりの平均電流は$I_{CP}\times \frac{(パルスの幅)}{2\pi}$
+		  * $I_{avg} = \frac{\phi_e}{2\pi}I_{CP}$
+		  * PFD/CPへの入力は位相$\phi_e$で出力は$I_{avg}$より
+		    * ゲイン$K_{PD}$は$K_{PD}=\frac{I_{CP}}{2\pi}$で表せる
+			* 単位は$A/rad$
 </details>
