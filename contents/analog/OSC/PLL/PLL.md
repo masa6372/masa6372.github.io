@@ -141,3 +141,23 @@
 		    * ゲイン$K_{PD}$は$K_{PD}=\frac{I_{CP}}{2\pi}$で表せる
 			* 単位は$A/rad$
 </details>
+
+<details>
+<summary><b>Day 2:VCOを積分器としてモデル化する</b></summary>
+
+* Day2 :VCOを積分器としてモデル化する
+	* $K_{VCO}$の単位を確認する
+    	* Hz/V 
+		* rad/s/V
+	* VCOは2種類の見方が可能
+    	* 電圧によって周波数を制御
+        	* ゲインはHz/V
+			* 角速度を制御していると考えると
+              * ゲインはrad/s/V
+	* 位相領域でVCOが$K_{VCO}/s$になることを理解する
+		* $\omega_{out}=\omega_{0}+K_{VCO}\times V_{CNT}$
+		* $\phi_{out}=\phi_{0}+\omega_{0}t+K_{VCO}\int V_{CNT}dt$
+		* $\phi_{out}=\frac{K_{VCO}V_{CNT}}{s}$
+	* VCOゲインが大きいと何が起きるかを整理する
+		* PLLのループゲイン増大
+  		* 周波数可変範囲を広げやすい
