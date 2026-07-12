@@ -163,3 +163,28 @@
   		* 周波数可変範囲を広げやすい
 		* ノイズに敏感になる
 </details>
+
+<details>
+<summary><b>Day 3:Loop Filterをs領域で表す</b></summary>
+
+* Day 3：Loop Filterをs領域で表す
+  * PLLの開ループの伝達関数は
+    * $L(s) = \frac{K_{PD}K_{VCO}Z(s)}{Ns}$で表せる  
+  	$Z(s)$はLoop Filterのインピーダンス
+  * RCフィルタのインピーダンス Z(s) を書く
+	* 1次のローパスフィルタの場合CPから見たインピーダンスは
+    	* $Z(s) = \frac{sRC+1}{sC}$
+	* 開ループ伝達関数に$Z(s)$を代入すると
+    	* 原点にpoleを2つもち、zeroを1つもつ
+		* 積分器が二つあるのでTypeⅡのPLL
+	* 閉ループの伝達関数の分母は$1+L(s)$で決まる
+    	* 分母は$s^2+2\zeta \omega n+\omega^2$の形になるためorderは2次になる
+* 2次PLLと3次PLLの違いを理解する
+  * zeroとpoleの意味を整理する
+  * reference spurやVCOの制御電圧のリップルを防ぐためにLPFの次数を増やすことを実際には行うことが多い
+    * CPの後にCPと1次LPFの手前に容量を対GNDに1つ追加する
+      * poleが高周波に一つ増える
+        * 追加のpoleは原点のpoleではないのでtypeⅡ
+		* orderが3になる
+		* 2つのpole+1つのzeroで-20dB/decでゲインが低下していたのが、2つの原点のpole+1つの高周波のpole+1つのzeroになるので追加のpoleで-40dB/decになる
+</details>
