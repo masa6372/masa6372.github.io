@@ -188,3 +188,50 @@
 		* orderが3になる
 		* 2つのpole+1つのzeroで-20dB/decでゲインが低下していたのが、2つの原点のpole+1つの高周波のpole+1つのzeroになるので追加のpoleで-40dB/decになる
 </details>
+
+<details>
+<summary><b>Day 4:開ループ/閉ループ伝達関数をかく</b></summary>
+
+* G(s)=KPD × Z(s) × KVCO / (N × s) を導出する
+	* PFD/CPはフィードバックされた位相のエラー$\phi_{e}$を電流に変換
+    	* $I_{CP} = \frac{\phi_{e}}{2\pi}K_{PD}$
+	* LFは電流を電圧に変換Z(s)
+	* VCOは電圧を位相に変換
+    	* $\phi_{vco}=\frac{K_{VCO}V_{CNT}}{s}$
+	* 分周器でN分周されてrefと比較される
+	* 結局開ループ伝達関数は
+    	* $L(s)=\frac{K_{PD}K_{VCO}Z(s)}{Ns}$で表せる
+* reference-to-output transferを導出する
+*  $\Phi_{ref}$から$\Phi_{out}$への伝達関数
+   * $\Phi_{e}=\Phi_{ref}-\Phi_{div}$…①
+   * $\Phi_{out}=\Phi_{e}A(s)$
+   * $\Phi_{div}=\Phi_{out}/N$より①に代入して
+   * $\Phi_{out}/A(s)=\Phi_{ref}-\Phi_{out}/N$整理すると
+   * $\Phi_{out}/\Phi_{ref}=\frac{NL(s)}{1+L(s)}$となる
+   * 分周後の伝達関数は
+   * $\Phi_{out}/\Phi_{VCO}=\frac{L(s)}{1+L(s)}$となる
+* VCO-noise-to-output transferを導出する
+	* 出力の位相は$\Phi_{out}=A(s)\Phi_{e}+\Phi_{VCO}$
+	* 位相誤差は$\Phi_{e}=\Phi_{ref}-\Phi_{out}/N$
+		* VCOの伝達関数を求めるために$\Phi_{ref}=0$とすると
+		* $\frac{\Phi_{out}}{\Phi_{VCO}}=\frac{1}{1+L(s)}$で表せる
+		* 低周波で$L(s)$は大きくなり、高周波で小さくなる
+    		* よって、VCOのノイズは低周波で抑圧されて高周波でそのまま出力に伝わるためハイパス特性となる
+* 入力ref信号はローパス特性で出力に伝わり、VCOのノイズはハイパス特性で出力に伝わる
+</details>
+
+<details>
+<summary><b>Day 5:ループ帯域と位相を設計する</b></summary>
+
+* 目標loop bandwidthを確認する
+	* 帯域を広げ過ぎると位相余裕が取りづらく、帯域が狭すぎるとrefに追従してくれない
+    	* 帯域が広い→ユニティゲイン周波数が大きい→位相が遅れるので位相余裕が取りづらい
+    	* $\omega_0=\omega_{ref}/10$が目安と言われている
+* damping factorを0.7前後に置いた時の応答を確認する
+	* Type-ⅡPLLでは$s^2+2\zeta \omega n+\omega^2$のような分母が2次系の形になる
+    	* このとき$\zeta=0.7$としてやると安定性と速さの観点からバランスが取れることが知られている
+* Bode plotで安定性を確認する
+	* Type-ⅡPLLでは低周波に極を二つもつため安定性が取りづらい
+    	* そのためLFでゼロ点を作り3次のorderにすることが多い
+  
+</details>
